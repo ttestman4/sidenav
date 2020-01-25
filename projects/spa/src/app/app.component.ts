@@ -1,5 +1,5 @@
-import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
   animal: string;
@@ -17,13 +17,13 @@ export class AppComponent {
   animal: string;
   name: string;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
       width: '1000px',
       height: '800px',
-      data: {name: this.name, animal: this.animal}
+      data: { name: this.name, animal: this.animal }
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -41,7 +41,10 @@ export class DialogOverviewExampleDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+
+  fixed = true;
+  gap = 0;
 
   onNoClick(): void {
     this.dialogRef.close();

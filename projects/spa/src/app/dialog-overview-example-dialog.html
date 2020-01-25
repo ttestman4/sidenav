@@ -1,55 +1,56 @@
-<mat-sidenav-container autosize>
-  <mat-sidenav #sidenav  mode="over" position="end" >Sidenav content</mat-sidenav>
+<!-- <mat-sidenav-container style="height:100%;width:100%">
+  <mat-sidenav #sidenav mode="over" position="end" >
+    Sidenav content</mat-sidenav>
   <mat-sidenav-content>
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-  <ol>
-    <li>
-      <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
-    </li>
-    <li>
-      <button mat-raised-button (click)="drawer.toggle()">
-        Toggle drawer
-      </button>
-    </li>
-  </ol>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
+    <h1 mat-dialog-title>Hi {{data.name}}</h1>
+    <div mat-dialog-content>
+      <p>What's your favorite animal?</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.animal">
+      </mat-form-field>
+      <ol>
+        <li>
+          <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
+        </li>
+        <li>
+          <button mat-raised-button (click)="drawer.toggle()">
+            Toggle drawer
+          </button>
+        </li>
+      </ol>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+    </div>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
 
-<!-- <mat-drawer-container autosize>
+<mat-drawer-container style="height:100%;width:100%">
   <mat-drawer #drawer mode="over" position="end">
     Drawer Content
   </mat-drawer>
   <mat-drawer-content>
     <h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-  <ol>
-    <li>
-      <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
-    </li>
-    <li>
-      <button mat-raised-button (click)="drawer.toggle()">
-        Toggle drawer
-      </button>
-    </li>
-  </ol>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
-</mat-drawer-content>
-</mat-drawer-container> -->
+    <div mat-dialog-content>
+      <p>What's your favorite animal?</p>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.animal">
+      </mat-form-field>
+      <ol>
+        <li>
+          <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
+        </li>
+        <li>
+          <button mat-raised-button (click)="drawer.toggle()">
+            Toggle drawer
+          </button>
+        </li>
+      </ol>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
